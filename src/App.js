@@ -1,10 +1,15 @@
+import CategoryList from "./CategoryList";
 import CocktailList from "./CocktailList";
 
 
 
 function App() {
   return (
-    <CocktailList />
+    <>
+      <CocktailList />
+      <CategoryList />
+    </>
+
   );
 }
 
