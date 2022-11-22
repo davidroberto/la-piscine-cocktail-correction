@@ -1,6 +1,6 @@
 const CocktailDetail = (props) => {
     return (
-        <article>
+        <article> 
             <img src={props.cocktailData.strDrinkThumb} alt={props.cocktailData.strDrink}/>
             <h2>{props.cocktailData.strDrink}</h2>
             <p>{props.cocktailData.strCategory}</p>
@@ -8,7 +8,7 @@ const CocktailDetail = (props) => {
 
             <ul>
                 {props.cocktailData.ingredients.map((ingredient) => {
-                    return (<li>{ingredient}</li>)
+                    return (<li key={ingredient}>{ingredient}</li>)
                 })}
             </ul>
         </article>

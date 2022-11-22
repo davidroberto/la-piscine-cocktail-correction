@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import CocktailDetail from "./CoktailDetail";
+import CocktailDetail from "./CocktailDetail";
 
 const cocktailsData = [
     {
@@ -53,8 +53,14 @@ const CocktailList = () => {
         <>
             {cocktailsData.map((cocktailData) => {
                 return (
-                   <CocktailDetail cocktailData={cocktailData}/>
-                    
+                    <Fragment key={cocktailData.idDrink}>
+                        {cocktailData.isPublished ? (
+                            <CocktailDetail key={cocktailData.idDrink} cocktailData={cocktailData}/>
+                        ) : (
+                            <p>Ce cocktail ne peut pas être affiché</p>
+                        )}
+                    </Fragment>
+                   
                 )
             })}
         </>

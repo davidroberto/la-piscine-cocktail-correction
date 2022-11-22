@@ -1,4 +1,4 @@
-import CocktailList from "./CoktailList";
+import CocktailList from "./CocktailList";
 
 
 
